@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 import { Quote } from "../../data/quote.interface";
 
 
@@ -15,6 +15,12 @@ export class QuotesPage implements OnInit {
     constructor(private navParams: NavParams) {}
 
     ngOnInit() {
-      this.quoteGroup = this.navParams.data;
+        this.quoteGroup = this.navParams.data;
+        console.log(this.quoteGroup);
     } 
+
+    // Methods
+    onAddToFavorite(favQuote: Object) {
+        console.log(favQuote);
+    }
 }
